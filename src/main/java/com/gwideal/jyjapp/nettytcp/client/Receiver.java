@@ -26,6 +26,8 @@ public class Receiver {
     private long t1;
     private int process = 0;
 
+
+
     public Receiver(TransData data) {
         init(Tool.getMsg(data));
     }
@@ -35,6 +37,10 @@ public class Receiver {
         fileName = ss[0].trim();
         totalSize = Long.valueOf(ss[1].trim());
         //new File(dstPath).mkdirs();
+        File file = new File(dstPath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
         File f = new File(dstPath + File.separator + fileName);
         if (f.exists()) {
             f.delete();

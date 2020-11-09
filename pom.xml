@@ -11,7 +11,8 @@
 	<groupId>com.gwideal</groupId>
 	<artifactId>jyjapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+<!--	<packaging>war</packaging>-->
+	<packaging>jar</packaging>
 	<name>jyjapp</name>
 	<description>jyjapp based tcp</description>
 
@@ -53,6 +54,8 @@
 	</dependencies>
 
 	<build>
+		<finalName>outerEnd</finalName>
+<!--		<finalName>innerEnd</finalName>-->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
